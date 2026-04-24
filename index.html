@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Devoir</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 50px; }
+    input, button { padding: 10px; margin: 10px; width: 300px; }
+    #response { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<h1>🤖 Aide aux devoirs</h1>
+
+<input type="text" id="question" placeholder="Pose ta question...">
+<br>
+<button onclick="askAI()">Envoyer</button>
+
+<div id="response"></div>
+
+<script>
+function askAI() {
+  let question = document.getElementById("question").value;
+
+  if(question === "") {
+    document.getElementById("response").innerText = "Écris une question";
+    return;
+  }
+
+  // simulation IA
+  document.getElementById("response").innerText =
+    "Réponse IA : Je pense que la réponse est liée à " + question;
+}
+</script>
+
+</body>
+</html>
